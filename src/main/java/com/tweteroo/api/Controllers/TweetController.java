@@ -3,16 +3,17 @@ package com.tweteroo.api.Controllers;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.tweteroo.api.Repositories.TweetRepository;
+
+import com.tweteroo.api.Services.TweetService;
 
 @RestController
 @RequestMapping("/users")
 public class TweetController {
     
-    final TweetRepository tweetRepository;
+    final TweetService tweetService;
 
-    TweetController(TweetRepository tweetRepository){
-        this.tweetRepository = tweetRepository;
+    TweetController(TweetService tweetService){
+        this.tweetService = tweetService;
     }
 
     
